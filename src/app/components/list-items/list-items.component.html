@@ -1,1 +1,7 @@
-<p>list-items works!</p>
+<div *ngFor="let item of items">
+  <h3>{{item.itemName}}</h3>
+
+  <p>{{item.amount | currency : 'NGN'}}</p>
+  <p>{{item.location}}</p>
+  <p>{{item.description}}</p>
+</div>
