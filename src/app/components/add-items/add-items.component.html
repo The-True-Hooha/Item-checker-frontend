@@ -1,1 +1,23 @@
-<p>add-items works!</p>
+<form (ngSubmit)="saveItem()">
+  <input type="text"
+          name="items"
+          [(ngModel)]="item.itemName"
+          placeholder="input the item name"/>
+
+  <input type="text"
+          name="amount"
+          [(ngModel)]="item.amount"
+          placeholder="input the item price"/>
+
+  <textarea type="text"
+          name="description"
+          [(ngModel)]="item.description"
+          placeholder="input the item description"></textarea>
+
+  <textarea type="text"
+          name="location"
+          [(ngModel)]="item.location"
+          placeholder="input the item location"></textarea>
+
+  <button  type="submit">Add Item</button>
+</form>
