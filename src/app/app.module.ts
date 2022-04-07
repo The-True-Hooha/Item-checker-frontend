@@ -24,7 +24,8 @@ const routers: Routes = [
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routers)
   ],
   providers: [],
   bootstrap: [AppComponent]

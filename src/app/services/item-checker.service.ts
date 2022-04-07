@@ -21,4 +21,8 @@ export class ItemCheckerService {
       map(response => response)
     )
   }
+
+  saveItem(item: ItemChecker): Observable<ItemChecker> {
+    return this.httpClient.post<ItemChecker>(this.getUrl, item);
+  }
 }
