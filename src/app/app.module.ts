@@ -14,6 +14,7 @@ import { AddItemsComponent } from './components/add-items/add-items.component';
 const routers: Routes = [
   {path: 'items', component: ListItemsComponent},
   {path: 'addItems', component: AddItemsComponent},
+  {path: 'edit-item/:id', component: AddItemsComponent},
   {path: '', redirectTo: '/items', pathMatch: 'full'}
 ]
 

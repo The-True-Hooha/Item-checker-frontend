@@ -19,5 +19,7 @@
           [(ngModel)]="item.location"
           placeholder="input the item location"></textarea>
 
-  <button  type="submit">Add Item</button>
+  <button  type="submit"> Add Item </button>
+
+  <button *ngIf="item.id" type="button" (click)="deleteItem(item.id)"> Delete Item </button>
 </form>
