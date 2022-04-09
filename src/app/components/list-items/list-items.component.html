@@ -1,4 +1,14 @@
 <a routerLink="/add-item">Add item</a>
+<input type="text"
+        placeholder="keyword"
+        [(ngModel)]="filters.keyword"
+        name="keyword"
+        (input)="listItems()">
+
+<select name="SortBy" [(ngModel)]="filters.sortBy" title="sortBy" id="">
+  <option value=""> Name </option>
+  <option value=""> Amount </option>
+</select>
 
 <div *ngFor="let item of items">
   <h3>{{item.itemName}}</h3>
@@ -8,4 +18,5 @@
   <p>{{item.description}}</p>
   
   <a routerLink="/edit-item/{{items.id}}">Edit</a>
+  <button type="button" (click)="deleteItem(item.id)">Delete</button>
 </div>
